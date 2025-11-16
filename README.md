@@ -6,9 +6,9 @@ This project aims to build a cli weather app in rust using the open-meteo api.
 
 ### Task 1:
 
-- [ ] Create a local application that can be run & parse args.
-- [ ] Get the daily weather forecast for 10 favourite Belgian cities (hardcoded geocode?).
-- [ ] Print their forecast in the terminal.
+- [✔️] Create a local application that can be run & parse args.
+- [✔️] Get the daily weather forecast for 10 favourite Belgian cities (hardcoded geocode).
+- [✔️] Print their forecast in the terminal.
 
 ### Option<Task 2>:
 
