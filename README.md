@@ -15,11 +15,11 @@ This project aims to build a cli weather app in rust using the open-meteo api.
 
 ### Option<Task 2>:
 
-- [ ] Select one city from the list of 10 to get its weather forecast.
-- [ ] Get the weather forecast for an unknown city (using open-meteo geocoding API?).
-- [ ] Add a command to get the weather forecast for tomorrow.
-- [ ] Add a command to get the weather forecast for the day after tomorrow.
-- [ ] Add a command for tomorrow & day after tomorrow at the same time. 
+- [x] Select one city from the list of 10 to get its weather forecast.
+- [x] Get the weather forecast for an unknown city (using open-meteo geocoding API?).
+- [x] Add a command to get the weather forecast for tomorrow.
+- [x] Add a command to get the weather forecast for the day after tomorrow.
+- [x] Add a command for tomorrow & day after tomorrow at the same time. 
 
 ### Option<Task 3>:
 
