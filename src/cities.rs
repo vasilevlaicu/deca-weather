@@ -14,9 +14,9 @@ pub fn get_favourite_cities() -> Vec<City> {
             long: 4.40026,
         },
         City {
-            name: "Antwerp".to_string(),
-            lat: 51.22047,
-            long: 4.40026,
+            name: "Grimbergen".to_string(),
+            lat: 50.93409,
+            long: 4.37213,
         },
         City {
             name: "Liège".to_string(),
