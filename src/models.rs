@@ -1,4 +1,5 @@
 use crate::wmo::{describe, emoji};
+use anyhow::{Error, bail};
 use serde::Deserialize;
 use std::fmt;
 
@@ -101,5 +102,38 @@ impl ForecastResponse {
             // long line after the end of a day
             println!("{}", line);
         }
+    }
+}
+
+// Structs to deserialize open-meteo geocoding api results based of this kind of response:
+// https://geocoding-api.open-meteo.com/v1/search?name=Grimbergen&count=1&language=en&format=json
+
+#[derive(Debug, Deserialize)]
+pub struct GeoResponse {
+    pub results: Option<Vec<GeoResult>>,
+}
+
+#[derive(Debug, Deserialize)]
+pub struct GeoResult {
+    pub name: String,
+    pub latitude: f64,
+    pub longitude: f64,
+}
+
+impl TryFrom<GeoResponse> for City {
+    type Error = Error;
+    fn try_from(geo_response: GeoResponse) -> Result<Self, Self::Error> {
+        let results = match geo_response.results {
+            Some(v) if !v.is_empty() => v,
+            _ => bail!("No geocoding results found"),
+        };
+
+        let city_info = &results[0];
+
+        Ok(City {
+            name: city_info.name.to_string(),
+            lat: city_info.latitude,
+            long: city_info.longitude,
+        })
     }
 }

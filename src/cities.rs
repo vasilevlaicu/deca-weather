@@ -1,6 +1,7 @@
 use crate::models::City;
 
 // lat and long taken from the open-meteo geocoding api: https://open-meteo.com/en/docs/geocoding-api?name=Dinant
+// could use static vec to avoid memory reallocation?
 pub fn get_favourite_cities() -> Vec<City> {
     vec![
         City {
