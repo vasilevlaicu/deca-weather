@@ -23,11 +23,7 @@ This project aims to build a cli weather app in rust using the open-meteo api.
 
 ### Option<Task 3>:
 
-- [ ] Store application results in a local Sqlite3 database.
-- [ ] Add a new city to synchronize.
-- [ ] Get the weather forecast for a city available in the DB.
-- [ ] Remove a city from the DB.
-
-### Additional features
-- [ ] Use axum to make an API/interface to easily use the open-meteo api.
-- [ ] Create a weather app frontend to use it. 
+- [x] Store application results in a local Sqlite3 database.
+- [x] Add a new city to synchronize.
+- [x] Get the weather forecast for a city available in the DB.
+- [x] Remove a city from the DB.
